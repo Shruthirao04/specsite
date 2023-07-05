@@ -1,0 +1,135 @@
+@use "./abstracts/colors" as *;
+
+.bagd__image
+{
+    background: $navyblue url('https://www.specbee.com/themes/custom/specbee/assets/media/webp/billboard-bg-light.webp') no-repeat 50%;
+    background-size: cover;
+    background-blend-mode: multiply;
+    width: 100%;
+    height: 600px;
+}
+
+.craft {
+
+    padding: 3.5rem 1.25rem ;
+    box-sizing: border-box;
+
+    &__item {
+
+        display: flex;
+        flex-direction: column;
+
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+
+            &:nth-child(2) {
+                flex-direction: row-reverse;
+            }
+        }
+
+        &:first-child {
+            margin-bottom: 6rem;
+
+            @media screen and (min-width: 768px) {
+
+                .crafting_item_content {
+                    margin-right: 2.5rem;
+                    margin-left: 0;
+                }
+            }
+        }
+
+        &__img img {
+            width: 100%;
+        }
+        @media screen and (min-width: 768px) {
+            &__img {
+                width: 50%;
+            }
+        }
+
+        &__content {
+            margin-top: 1rem;
+
+            @media screen and (min-width: 768px) {
+                width: 50%;
+                margin-right: 2.5rem;
+                margin-left: 2.5rem;
+            }
+        }
+
+        &__title {
+            margin-bottom: 1.25rem;
+            color: $navyblue;
+            font-family: "Montserrat",sans-serif;
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+        &__desc {
+
+            p {
+                margin-bottom: 2.5rem;
+                font-family: "Work Sans",sans-serif;
+                line-height: 1.65;
+                font-size: 1rem;
+                color: $black;
+            }
+        }
+
+        &__link {
+            a {
+                text-decoration: none;
+                font-weight: 800;
+                font-size: 1rem;
+                color: $navyblue;
+
+                &:hover {
+                    color: $primary-blue;
+                }
+            }
+
+            &::before {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                background-color: $yellow;
+                width: 1.75rem;
+                height: 0.25rem;
+            }
+        }
+    }
+}
+
+.mix {
+    background-color: $primary-blue;
+    padding-bottom: 40px;
+
+    &__title {
+        font-family: "Hanson",sans-serif;
+        font-size: 1.5rem;
+        color: $white;
+        padding: 40px;
+
+        // &::before {
+        //     content: "";
+        //     height: 0.60rem;
+        //     margin-right: 5px;
+        //     width: 45px;
+        //     display: inline-block;
+        //     margin-bottom: 15px;
+        //     vertical-align: middle;
+        //     background-color: $yellow;
+        // }
+    }
+
+    &__des {
+        font-family: "Work Sans",sans-serif;
+        font-size: 1rem;
+        line-height: 1.65;
+        color: $white;
+        padding-left: 20px;
+        padding-right: 6rem;
+    }
+}

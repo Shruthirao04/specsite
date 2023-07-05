@@ -1,0 +1,101 @@
+.bagd__image {
+  background: #001186 url("https://www.specbee.com/themes/custom/specbee/assets/media/webp/billboard-bg-light.webp") no-repeat 50%;
+  background-size: cover;
+  background-blend-mode: multiply;
+  width: 100%;
+  height: 600px;
+}
+
+.craft {
+  padding: 3.5rem 1.25rem;
+  box-sizing: border-box;
+}
+.craft__item {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .craft__item {
+    flex-direction: row;
+  }
+  .craft__item:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+}
+.craft__item:first-child {
+  margin-bottom: 6rem;
+}
+@media screen and (min-width: 768px) {
+  .craft__item:first-child .crafting_item_content {
+    margin-right: 2.5rem;
+    margin-left: 0;
+  }
+}
+.craft__item__img img {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .craft__item__img {
+    width: 50%;
+  }
+}
+.craft__item__content {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .craft__item__content {
+    width: 50%;
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+  }
+}
+.craft__item__title {
+  margin-bottom: 1.25rem;
+  color: #001186;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+}
+.craft__item__desc p {
+  margin-bottom: 2.5rem;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.65;
+  font-size: 1rem;
+  color: #0f0f0f;
+}
+.craft__item__link a {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1rem;
+  color: #001186;
+}
+.craft__item__link a:hover {
+  color: #0020f6;
+}
+.craft__item__link::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #e3F307;
+  width: 1.75rem;
+  height: 0.25rem;
+}
+
+.mix {
+  background-color: #0020f6;
+  padding-bottom: 40px;
+}
+.mix__title {
+  font-family: "Hanson", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  padding: 40px;
+}
+.mix__des {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: white;
+  padding-left: 20px;
+  padding-right: 6rem;
+}

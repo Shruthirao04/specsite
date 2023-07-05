@@ -1,0 +1,16 @@
+@use "./colors" as *;
+@mixin button ($color, $border-color, $bg-color, $hover-color, $hover-border, $hover-bg) {
+    border: solid 1px $border-color;
+    padding: 10px 20px;
+    width: 100px;
+    height: 40px;
+    background-color: $bg-color;
+    color: $color;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $hover-bg;
+        color: $hover-color;
+        border-color: $hover-border;
+    }
+}

@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.card {
+  width: 45%;
+}
+.card__link a:first-child {
+  border: solid 1px #0f0f0f;
+  padding: 10px 20px;
+  width: 100px;
+  height: 40px;
+  background-color: white;
+  color: #0f0f0f;
+  text-decoration: none;
+}
+.card__link a:first-child:hover {
+  background-color: #f7992b;
+  color: white;
+  border-color: #f7992b;
+}
+.card__link a:last-child {
+  border: solid 1px white;
+  padding: 10px 20px;
+  width: 100px;
+  height: 40px;
+  background-color: white;
+  color: #f7992b;
+  text-decoration: none;
+}
+.card__link a:last-child:hover {
+  background-color: #f7992b;
+  color: #0f0f0f;
+  border-color: #f7992b;
+}

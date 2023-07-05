@@ -1,108 +1,121 @@
 @use "./abstracts/colors" as *;
 
-header{
-    background-color: $primary-blue;
-    padding: 0 20px;
-
-    li{
-    list-style: none;
-
-    a{
-        color: $white;
-        text-decoration: none;
-        font-size: 1.5rem;
-    }
-    }
-}
-
-.ham{
-    min-height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-
-&-branding{
-    font-size: 2rem;
-}
-&-menu{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
-
-}
-
-&__contactus {
-    display: flex;
-    width: 70px;
-    justify-content: space-between;
-}
-
-}
-.hamburger {
-    cursor: pointer;
-
-
-&.active .bar:nth-child(2){
-    opacity: 0;
-    }
-&.active .bar:nth-child(1){
-    transform: translateY(8px) rotate(45deg);
-    }
-&.active .bar:nth-child(3){
-    transform: translateY(-8px) rotate(-45deg);
-    }
-}
-
-.bar{
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    background-color: $white;
-}
-
-@media(min-width:425px){
-
-.ham-menu{
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    gap: 0;
-    flex-direction: column;
-    background-color: $primary-blue;
+header {
+    position: sticky;
     width: 100%;
-    text-align: center;
-    transition: 0.3s;
-}
-.ham-item{
-    margin: 20px 0;
-
-    &:first-child::before {
-    content: "";
-    height: 0.25rem;
-    width: 60px;
-    position: absolute;
-    left: 0;
-    top: 30px;
-    background-color:$yellow;
-}
-
-a:hover {
-    color: $yellow;
-}
-
-}
-.ham-menu.active{
-    left: 0;
-    position: absolute;
-    background-color: $primary-blue;
+    // float: left;
     z-index: 1;
+    top: 0;
+
+    li {
+        list-style: none;
+
+        a {
+            color: $white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-family: "Work Sans",sans-serif;
+        }
+    }
 }
+.ham {
+    &__toggle {
+        cursor: pointer;
+        padding: 15px;
+        // float: right;
+        color: $white;
+        font-size: 20px;
+        position: relative;
+        z-index: 1;
+
+        &__bar {
+            width: 25px;
+            height: 3px;
+            background-color: $white;
+            margin-bottom: 4px;
+            transition: transform 0.3s ease;
+        }
+    }
+    &__menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $primary-blue;
+
+        &.menu {
+            display: block;
+
+            & ul {
+                list-style-type: none;
+                font-family: "Work Sans", sans-serif;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                font-size: 2rem;
+                font-weight: 700;
+                letter-spacing: 0.125rem;
+
+                @media screen and (min-width: 1023px) {
+                    font-size: 3.5rem;
+                }
+
+                & li {
+                    margin: 10px;
+
+                    a {
+                        color: $white;
+                        margin-left: 40px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__service::before {
+        content: "";
+        height: 0.6rem;
+        width: 90px;
+        display: inline-block;
+        margin-left: -90px;
+        background-color: $yellow;
+    }
 }
-.ham-menu__sub-menu {
-    display: none;
+
+.ham__toggle.lines .ham__toggle__bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.ham__toggle.lines .ham__toggle__bar:nth-child(2) {
+    opacity: 0;
+}
+
+.ham__toggle.lines .ham__toggle__bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+.headbar {
+    background-color: $primary-blue;
+
+    &__list {
+        margin: 0 15px;
+        position: sticky;
+        min-height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__contact {
+        & svg {
+            margin-left: 130px;
+            margin-top: 10px;
+        }
+    }
+}
+.ham__merge {
+    display: flex;
 }

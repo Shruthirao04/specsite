@@ -2,6 +2,15 @@
 * {
     margin: 0;
 }
+
+.bgd__image
+{
+    background: $primary-blue url('https://www.specbee.com/themes/custom/specbee/assets/media/webp/billboard-bg-light.webp') no-repeat 50%;
+    background-size: cover;
+    background-blend-mode: multiply;
+    width: 100%;
+    height: 600px;
+}
 .services {
     background-color: $primary-blue;
     padding-bottom: 100px;
