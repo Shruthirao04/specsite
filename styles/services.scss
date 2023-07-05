@@ -1,0 +1,429 @@
+@use './abstracts/colors' as *;
+* {
+    margin: 0;
+}
+.services {
+    background-color: $primary-blue;
+    padding-bottom: 100px;
+
+    &__heading {
+        font-size: 5rem;
+    margin-top: 0;
+    padding-top: 5rem;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+
+    @media (max-width: 768px) {
+    font-size: 4.125rem;
+    font-weight: 800
+    }
+
+    @media (max-width: 480px) {
+    font-size: 50px;
+        margin: 0 0 -23px 5px;
+        padding: 20px 0 0 5px;
+    }
+
+        &::before {
+            content: "";
+            height: 0.75rem;
+            display: inline-block;
+            width: 150px;
+            margin-right: 50px;
+            margin-bottom: 15px;
+            vertical-align: middle;
+            background-color: $yellow;
+
+            @media (max-width: 768px) {
+                width: 50px;
+        height: 0.80rem;
+            }
+
+            @media (max-width: 480px) {
+                content: "";
+        height: 0.60rem;
+        margin-right: 5px;
+        width: 45px;
+            }
+        }
+    }
+    &__wrapper {
+        max-width: 65rem;
+        padding-top: 50px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2.5rem;
+
+        @media (max-width: 768px) {
+            max-width: 65rem;
+    justify-content: center;
+    gap: 2rem;
+    }
+
+    @media (max-width: 480px) {
+    padding-top: 50px;
+        gap: 2.5rem;
+        margin: 0;
+        text-align: center;
+    }
+    }
+
+    &__card {
+        width: 30%;
+        text-align: center;
+        color: $white;
+        position: relative;
+
+        @media (max-width: 768px) {
+            width: 40%;
+        }
+
+        @media (max-width: 480px) {
+        width: 100%;
+        text-align: center;
+    }
+    }
+
+    &__image__wrapper {
+        background-image:url("https://www.specbee.com/themes/custom/specbee/assets/media/icons/polygon.svg");
+        background-repeat: no-repeat;
+        height: 15rem;
+        width: 15rem;
+        background-position-x: 50%;
+        background-position-y:center;
+        background-size: contain;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        position: relative;
+
+        &:hover img {
+            transform: scale(.8);
+
+        }
+
+        img {
+            width: 6rem;
+            transition: all 0.25s ease-in-out;
+        }
+
+        &:before {
+            background: url("https://www.specbee.com/themes/custom/specbee/assets/media/icons/polygon-line.svg") no-repeat 50%/contain;
+            content: "";
+            height: 17.5rem;
+            left: -1.1875rem;
+            position: absolute;
+            top: -1.125rem;
+            width: 17.5rem;
+            transform: scale(0.5);
+            z-index: -1;
+            transition: 0.25s;
+        }
+
+        &:hover:before {
+            transform: scale(1);
+            z-index: 0;
+        }
+    }
+    &__title {
+        font-size: 1.25rem;
+    margin-top: 15px;
+    font-weight: 800;
+
+    @media (max-width: 768px) {
+    font-size: 1.25rem;
+    }
+
+    @media (max-width: 480px) {
+    margin-top: 20px;
+        font-size: 1.75rem;
+    }
+
+        a {
+            color: $white;
+            text-decoration: none;
+
+            // &::before {
+            //     content:"";
+            //     position: absolute;
+            //     top: 0;
+            //     bottom: 0;
+            //     left: 0;
+            //     right: 0;
+            // }
+        }
+    }
+    &__des {
+        font-size: 0.875rem;
+        line-height: 1.3rem;
+    margin-top: 5px;
+        font-family: "Work Sans",sans-serif;
+
+        @media (max-width: 480px) {
+        font-size: 0.999rem;
+        padding: 10px 70px;
+        word-spacing: 2px;
+        line-height: 1.5;
+        text-align: center;
+    }
+    }
+
+}
+
+.standing-out {
+    margin-bottom: 50px;
+
+    &__hover {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        background-color: #f5f5f5;
+        width: 100%;
+        transition: all 0.2s ease-in-out;
+        height: 6rem;
+
+    }
+
+    &__heading {
+        margin-left: 52px;
+        padding-top: 6rem;
+        font-size: 5rem;
+        color: $primary-blue;
+
+        @media (max-width: 768px) {
+            font-size: 4rem;
+        color: #0020f6;
+        margin: 0 0 -23px 5px;
+        padding: 20px 0 0 5px;
+    }
+    @media (max-width: 480px) {
+            font-size: 3.2rem;
+            color: #0020f6;
+            margin: 0 0 -23px 5px;
+            padding: 20px 0 0 5px;
+        }
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 100px;
+            height: 0.75rem;
+            margin-bottom: 1.75rem;
+            margin-top: 1.75rem;
+            vertical-align: middle;
+            background-color: $yellow;
+
+            @media (max-width: 768px) {
+                content: "";
+                height: 0.6rem;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 10px;
+                width: 40px;
+                background-color: $yellow;
+            }
+            @media (max-width: 480px) {
+                width: 20px;
+                height: 0.4rem;
+            }
+        }
+    }
+
+    &__wrapper {
+            max-width: 75rem;
+            padding-top: 51px;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-left: 31px;
+            margin-right: 31px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+    }
+
+    &__card {
+        width: 30%;
+    background-color: $cards;
+    position: relative;
+    box-shadow: 0 0 0 transparent;
+    height: 22rem;
+
+    @media (max-width: 768px) {
+        width: 47%;
+        height: auto;
+}
+    @media (max-width: 480px) {
+    width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    &:hover .standing-out__hover {
+        height: 100%;
+    }
+
+        img {
+            width: 21.3rem;
+
+            @media (max-width: 768px) {
+                width: 19rem;
+            }
+            @media (max-width: 480px) {
+                width: 19rem;
+            }
+        }
+    }
+
+    &__title {
+        position: relative;
+        color: $navyblue;
+        margin-bottom: 0.75rem;
+        margin-top: 0.75rem;
+        margin-left: 15px;
+        font-family: "Montserrat",sans-serif;
+        font-size: 1rem;
+        font-weight: 800;
+
+        @media (max-width: 480px) {
+            margin-bottom: 0;
+        }
+
+        &::after {
+            background-color: $primary-blue;
+            content: "";
+            height: 0.25rem;
+            position: absolute;
+            right: -0.048rem;
+            top: 58%;
+            width: 4rem;
+        }
+    }
+
+    &__des {
+        color: $black;
+        font-size: .875rem;
+        padding: 15px;
+        font-family: "Work Sans",sans-serif;
+    }
+}
+.para-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 50px;
+
+    @media (max-width: 768px) {
+            padding-left: 8px;
+            padding-right: 10px;
+        }
+
+    &__content {
+        padding: 30px;
+        margin-top: 2%;
+        color: $black;
+        background-color: $white;
+
+        @media (max-width: 480px) {
+                margin-bottom: 6rem;
+                margin-right: 20px;
+            }
+    }
+
+    &__des {
+        font-family: "Work Sans",sans-serif;
+        font-weight: 300;
+        font-size: 1.5rem;
+        margin-top: -30px;
+        margin-left: 130px;
+        padding-bottom: 5%;
+
+        @media (max-width: 480px) {
+        margin-top: 10px;
+        margin-left: 0;
+        font-size: 0.9rem;
+}
+    }
+
+    &__author {
+        margin-left: 130px;
+
+        @media (max-width: 480px) {
+        margin-left: 0;
+        margin-top: 20px;
+}
+
+        &--name {
+            margin-bottom: 2px;
+            font-size: 1.75rem;
+            font-family: "Montserrat",sans-serif;
+            font-weight: bolder;
+
+            @media (max-width: 480px) {
+            font-size: 1.125rem;
+            font-weight: 700;
+}
+        }
+
+        &--des {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: normal;
+
+            @media (max-width: 480px) {
+            font-size: .75rem;
+}
+        }
+    }
+}
+.more-contact {
+    background-color: $primary-blue;
+
+    &__txt {
+        padding-top: 6rem;
+        text-align: center;
+        color: $white;
+        font-size: 2.25rem;
+        font-weight: 800;
+
+        @media (max-width: 768px) {
+                font-size: 3.2rem;
+                font-weight: 600;
+            }
+        @media (max-width: 480px) {
+                font-size: 2rem;
+            }
+    }
+
+    &__btn {
+        background-color: $yellow;
+        border: 0.0625rem solid $yellow;
+        color: $primary-blue;
+        border-radius: 0.3125rem;
+        display: inline-block;
+        font-family: "Montserrat",sans-serif;
+        text-decoration: none;
+        font-size: .75rem;
+        font-weight: 700;
+        letter-spacing: .125rem;
+        margin-top: 3.5rem;
+        margin-bottom: 6rem;
+        padding: 0.5rem 2.5rem;
+
+        // @media (max-width: 768px) {
+        // margin-left: 280px;
+        // }
+        // @media (max-width: 480px) {
+        // margin-left: 120px;
+        // }
+
+        &:hover {
+            color: $yellow;
+            background-color: $primary-blue;
+    }
+    }
+}

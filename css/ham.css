@@ -1,0 +1,94 @@
+header {
+  background-color: #0020f6;
+  padding: 0 20px;
+}
+header li {
+  list-style: none;
+}
+header li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.ham {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ham-branding {
+  font-size: 2rem;
+}
+.ham-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+.ham__contactus {
+  display: flex;
+  width: 70px;
+  justify-content: space-between;
+}
+
+.hamburger {
+  cursor: pointer;
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+@media (min-width: 425px) {
+  .ham-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #0020f6;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .ham-item {
+    margin: 20px 0;
+  }
+  .ham-item:first-child::before {
+    content: "";
+    height: 0.25rem;
+    width: 60px;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    background-color: #e3F307;
+  }
+  .ham-item a:hover {
+    color: #e3F307;
+  }
+  .ham-menu.active {
+    left: 0;
+    position: absolute;
+    background-color: #0020f6;
+    z-index: 1;
+  }
+}
+.ham-menu__sub-menu {
+  display: none;
+}
