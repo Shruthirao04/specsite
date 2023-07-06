@@ -14,74 +14,89 @@ header li a {
   font-family: "Work Sans", sans-serif;
 }
 
-.ham__toggle {
-  cursor: pointer;
-  padding: 15px;
-  color: white;
-  font-size: 20px;
-  position: relative;
+.ham__nav {
+  height: 50px;
   z-index: 1;
 }
-.ham__toggle__bar {
-  width: 25px;
-  height: 3px;
-  background-color: white;
+
+.ham__nav-toggle {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.ham__nav-toggle .bar {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
   margin-bottom: 4px;
   transition: transform 0.3s ease;
 }
-.ham__menu {
+
+.ham__nav-menu {
   display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #0020f6;
+  background-color: blue;
 }
-.ham__menu.menu {
+
+.svg {
+  width: auto;
+  height: 30px;
+  margin: 20px 30px;
+}
+
+.ham__nav-menu.active {
   display: block;
 }
-.ham__menu.menu ul {
+
+.ham__nav-menu ul {
+  justify-content: center;
+  height: 100%;
+  font-size: 3.2rem;
   list-style-type: none;
-  font-family: "Work Sans", sans-serif;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 0.125rem;
 }
-@media screen and (min-width: 1023px) {
-  .ham__menu.menu ul {
-    font-size: 3.5rem;
-  }
+
+.service::before {
+  content: "";
+  display: inline-block;
+  height: 5px;
+  width: 92px;
+  margin-left: -92px;
+  margin-bottom: 5px;
+  background-color: yellow;
 }
-.ham__menu.menu ul li {
-  margin: 10px;
+
+.ham__nav-menu ul li {
+  margin: 12px;
+  margin-left: 50px;
 }
-.ham__menu.menu ul li a {
-  color: white;
-  margin-left: 40px;
+
+.ham__nav-menu ul li a {
+  color: #fff;
   text-decoration: none;
 }
-.ham__service::before {
-  content: "";
-  height: 0.6rem;
-  width: 90px;
-  display: inline-block;
-  margin-left: -90px;
-  background-color: #e3F307;
-}
 
-.ham__toggle.lines .ham__toggle__bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.ham__toggle.lines .ham__toggle__bar:nth-child(2) {
+.ham__nav-toggle.open .bar:nth-child(2) {
   opacity: 0;
 }
 
-.ham__toggle.lines .ham__toggle__bar:nth-child(3) {
+.ham__nav-toggle.open .bar:nth-child(1),
+.ham__nav-toggle.open .bar:nth-child(3) {
+  transform: rotate(45deg);
+}
+
+.ham__nav-toggle.open .bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.ham__nav-toggle.open .bar:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
 }
 
