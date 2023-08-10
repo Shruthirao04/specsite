@@ -1,0 +1,156 @@
+@use "./abstracts/colors" as *;
+
+.advertisement {
+
+    &__wrapper {
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    &__top {
+        position: absolute;
+        top: -16px;
+        left: 80px;
+        background-color: #0091c4;
+        color: $white;
+        border-radius: 12px;
+        padding: 8px 40px;
+    }
+
+    .fusion {
+        position: absolute;
+        top: -16px;
+        left: 70px;
+        padding: 8px 15px;
+        background-color: $cards;
+        color: orangered;
+        border: 2px solid orangered;
+    }
+
+    &__card {
+        width: 20%;
+        padding: 20px;
+        background-color: $cards;
+        box-shadow: 0 2px 10px 0 rgba(0,0,0,.4);
+        position: relative;
+
+        &:last-child {
+            &::before {
+            content: url(https://www.hughesnet.com/themes/custom/hughesnet_na_base_theme/images/Starburst.png);
+            position: absolute;
+            top: -25px;
+            left: -15px;
+        }
+    }
+
+    }
+
+    &__content {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    &__title {
+
+        h2 {
+            color: #174c8f;
+            font-size: 16px;
+        }
+        h3 {
+            font-size: 12px;
+            color: $white;
+        }
+    }
+
+    &__des {
+
+        p {
+            color: gray;
+            font-size: 18px;
+        }
+
+        a {
+            color: $white;
+        }
+
+    }
+
+.extend {
+    color: $white;
+    p {
+        color: $white;
+    }
+
+}
+
+    &__para {
+        color: #787878;
+        font-size: 18px;
+        font-weight: 800;
+    }
+
+    &__price {
+        color: #0091c4;
+        font-size: 35px;
+
+        font-weight: 800;
+        margin-top: 20px;
+    }
+
+    .price {
+        color: $white;
+        margin-top: 0;
+    }
+
+    .discount {
+        font-size: 18px;
+        color: $white;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 50%;
+            right: 0;
+            border-top: 1px solid;
+            border-color: $white;
+            // -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+        }
+    }
+
+    &__link {
+        position: absolute;
+        bottom: 0;
+        left: 60px;
+        padding: 8px 20px;
+        margin: 20px 0;
+        border-radius: 25px;
+        background-color: orangered;
+
+
+        a {
+            text-decoration: none;
+            color: $white;
+            // font-size: 12px;
+            font-weight: 700;
+        }
+    }
+
+    &__save {
+        padding-bottom: 20px;
+        p {
+        color: $white;
+        margin-top: 0;
+        }
+    }
+
+    .background-blue {
+        background-color: #174c8f;
+    }
+
+}
+

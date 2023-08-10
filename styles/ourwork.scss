@@ -1,0 +1,169 @@
+@use "./abstracts/colors" as *;
+
+// .ourwork {
+
+//     margin: 40px;
+//     &__card {
+//         width: 40%;
+//         position: relative;
+
+//         &--info {
+//             display: none;
+//         }
+//     }
+//     img {
+//         max-width: 100%;
+//     }
+
+//     &__content {
+//         padding-right: 6.75rem;
+//         padding-left: 20px;
+//         position: absolute;
+//         bottom: 0;
+
+//         h3 {
+//             color: $white;
+//             font-size: 2rem;
+//             margin: 0;
+//         }
+
+//         p {
+//             color: $white;
+//             font-size: 1rem;
+//             margin-top: 0;
+//         }
+//     }
+
+
+
+
+
+
+// }
+body {
+    // background-color: $primary-blue;
+    margin: 0;
+    padding: 0;
+}
+.accordion {
+    width: 100%;
+    // margin-top: 50px;
+    background-color: $primary-blue;
+
+    &__list {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    &__item {
+        border-top: .0625rem solid $white;
+        width: 35rem;
+
+        &:last-child {
+            border-bottom: .0625rem solid $white;
+        }
+    }
+
+    &__title {
+        background-color: $primary-blue;
+        padding: 16px 40px 16px 0;
+        cursor: pointer;
+        color: $white;
+        font-family: "Work Sans", sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        position: relative;
+
+        &::before {
+            background: $white;
+            content: "";
+            height: 0.25rem;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transition: all .25s ease-in-out;
+            width: 1rem;
+        }
+
+        &::after {
+            background: $white;
+            content: "";
+            height: 0.25rem;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transition: all .25s ease-in-out;
+            transform: rotate(90deg);
+            width: 1rem;
+        }
+    }
+
+    &__content {
+        padding: 10px;
+        display: none;
+        max-width: 30rem;
+        color: $white;
+
+        p {
+            font-size: 1rem;
+            line-height: 2;
+            font-family: "Work Sans", sans-serif;
+        }
+
+        li {
+            font-family: "Work Sans", sans-serif;
+            font-size: 1rem;
+            line-height: 2;
+        }
+    }
+}
+
+.tab {
+
+    .title {
+        padding: 60px;
+        margin: 0;
+        text-align: center;
+        background-color: $orange;
+        color: $white;
+    }
+
+    &-header {
+        display: flex;
+        background-color: $orange;
+        color: $white;
+
+        & > div {
+            text-align: center;
+            width: 25%;
+            padding: 20px;
+
+            &.active {
+                background-color: $white;
+                color: $black;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+            }
+        }
+    }
+    &-body {
+        margin: 80px 40px;
+        position: relative;
+    }
+
+    &-content {
+        position: absolute;
+        opacity: 0;
+
+        &.active {
+            opacity: 1;
+        }
+    }
+
+
+}

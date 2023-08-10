@@ -1,0 +1,116 @@
+.advertisement__wrapper {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.advertisement__top {
+  position: absolute;
+  top: -16px;
+  left: 80px;
+  background-color: #0091c4;
+  color: white;
+  border-radius: 12px;
+  padding: 8px 40px;
+}
+.advertisement .fusion {
+  position: absolute;
+  top: -16px;
+  left: 70px;
+  padding: 8px 15px;
+  background-color: #f5f5f5;
+  color: orangered;
+  border: 2px solid orangered;
+}
+.advertisement__card {
+  width: 20%;
+  padding: 20px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+.advertisement__card:last-child::before {
+  content: url(https://www.hughesnet.com/themes/custom/hughesnet_na_base_theme/images/Starburst.png);
+  position: absolute;
+  top: -25px;
+  left: -15px;
+}
+.advertisement__content {
+  text-align: center;
+  margin: 30px 0;
+}
+.advertisement__title h2 {
+  color: #174c8f;
+  font-size: 16px;
+}
+.advertisement__title h3 {
+  font-size: 12px;
+  color: white;
+}
+.advertisement__des p {
+  color: gray;
+  font-size: 18px;
+}
+.advertisement__des a {
+  color: white;
+}
+.advertisement .extend {
+  color: white;
+}
+.advertisement .extend p {
+  color: white;
+}
+.advertisement__para {
+  color: #787878;
+  font-size: 18px;
+  font-weight: 800;
+}
+.advertisement__price {
+  color: #0091c4;
+  font-size: 35px;
+  font-weight: 800;
+  margin-top: 20px;
+}
+.advertisement .price {
+  color: white;
+  margin-top: 0;
+}
+.advertisement .discount {
+  font-size: 18px;
+  color: white;
+  position: relative;
+}
+.advertisement .discount::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 1px solid;
+  border-color: white;
+  transform: rotate(-10deg);
+}
+.advertisement__link {
+  position: absolute;
+  bottom: 0;
+  left: 60px;
+  padding: 8px 20px;
+  margin: 20px 0;
+  border-radius: 25px;
+  background-color: orangered;
+}
+.advertisement__link a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+.advertisement__save {
+  padding-bottom: 20px;
+}
+.advertisement__save p {
+  color: white;
+  margin-top: 0;
+}
+.advertisement .background-blue {
+  background-color: #174c8f;
+}

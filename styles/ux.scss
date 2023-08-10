@@ -1,12 +1,67 @@
 @use "./abstracts/colors" as *;
 
-.bagd__image
-{
+.bagd {
     background: $navyblue url('https://www.specbee.com/themes/custom/specbee/assets/media/webp/billboard-bg-light.webp') no-repeat 50%;
     background-size: cover;
     background-blend-mode: multiply;
     width: 100%;
     height: 600px;
+
+    &__container {
+        position: absolute;
+        z-index: 1;
+        margin: 150px 70px ;
+        padding: 0 20px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__title {
+        max-width: 44rem;
+        margin-bottom: 40px;
+        font-size: 4rem;
+        color: $white;
+
+        // &::before {
+        //     content: "";
+        //     height: 1rem;
+        //     display: inline-block;
+        //     width: 30rem;
+        //     margin-right: 3.5rem;
+        //     margin-bottom: 15px;
+        //     vertical-align: middle;
+        //     background-color: #e3F307;
+        // }
+    }
+
+    &__des {
+        font-size: 1.2rem;
+        font-family: "Work Sans",sans-serif;
+        color: $white;
+    }
+
+    &-btn {
+        background-color: $yellow;
+        border: 0.0625rem solid $yellow;
+        color: $primary-blue;
+        border-radius: 0.3125rem;
+        display: inline-block;
+        font-family: "Montserrat",sans-serif;
+        text-decoration: none;
+        font-size: .75rem;
+        font-weight: 700;
+        letter-spacing: .125rem;
+        margin-top: 4.5rem;
+        margin-bottom: 6rem;
+        padding: 0.5rem 2.5rem;
+
+        &:hover {
+            color: $yellow;
+            background-color: $primary-blue;
+    }
+}
 }
 
 .craft {

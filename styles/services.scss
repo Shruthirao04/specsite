@@ -3,13 +3,69 @@
     margin: 0;
 }
 
-.bgd__image
-{
+.bgd {
     background: $primary-blue url('https://www.specbee.com/themes/custom/specbee/assets/media/webp/billboard-bg-light.webp') no-repeat 50%;
     background-size: cover;
     background-blend-mode: multiply;
     width: 100%;
     height: 600px;
+
+    img {
+        width: 692px;
+        height: 764px;
+        position: absolute;
+        left: 45%;
+        top: -1rem;
+        z-index: 1;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__container {
+        position: absolute;
+        z-index: 1;
+        margin: 150px 70px ;
+        padding: 0 20px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__title {
+        max-width: 39rem;
+        font-size: 4rem;
+        color: $white;
+    }
+
+    &__des {
+        font-size: 1.2rem;
+        font-family: "Work Sans",sans-serif;
+        color: $white;
+    }
+
+    &-btn {
+        background-color: $yellow;
+        border: 0.0625rem solid $yellow;
+        color: $navyblue;
+        border-radius: 0.3125rem;
+        display: inline-block;
+        font-family: "Montserrat",sans-serif;
+        text-decoration: none;
+        font-size: .75rem;
+        font-weight: 700;
+        letter-spacing: .125rem;
+        margin-top: 3.5rem;
+        margin-bottom: 6rem;
+        padding: 0.5rem 2.5rem;
+
+        &:hover {
+            color: $yellow;
+            background-color: $primary-blue;
+        }
+    }
 }
 .services {
     background-color: $primary-blue;
@@ -317,8 +373,13 @@
     &__des {
         color: $black;
         font-size: .875rem;
-        padding: 15px;
+        // padding: 2px;
+        padding: 2px 15px 15px 15px;
         font-family: "Work Sans",sans-serif;
+
+        @media (max-width: 480px) {
+            padding: 10px 15px 15px 15px;
+        }
     }
 }
 .para-container {

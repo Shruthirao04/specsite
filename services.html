@@ -7,6 +7,7 @@
         <link rel="icon" type="image/x-icon" href="images/images.jpg">
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Work+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel="stylesheet" href="css/insights.css">
         <link rel="stylesheet" href="css/services.css">
         <link rel="stylesheet" href="css/footer.css">
@@ -14,9 +15,8 @@
     </head>
     <body>
         <header>
-
-            <nav class="headbar">
-                <div class="headbar__list">
+            <nav class="headerbar">
+                <div class="headerbar__list">
                     <a href="/">
                         <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 181 31" width="190px">
                             <title>specbee-modified-logo</title>
@@ -31,8 +31,13 @@
                                 </g>
                             </g>
                         </svg></a>
+
                     <div class="ham__merge">
-                        <div class="headbar__contact">
+
+                        <div class="contact">
+                            <a class="contact__button" href="#">CONTACT US</a>
+                        </div>
+                        <div class="headerbar__contact">
                             <svg version="1.1" id="Layer_1" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500"
                                 style="enable-background:new 0 0 500 500;" xml:space="preserve">
@@ -82,13 +87,15 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="ham__nav">
-                            <div class="ham__nav-toggle">
-                                <div class="bar"></div>
-                                <div class="bar"></div>
-                                <div class="bar"></div>
-                            </div>
-                            <div class="ham__nav-menu" id="navMenu">
+                        <div class="header__nav-toggle">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="nav-sub-menu">
+                            <div class="header__nav-menu">
+
+
                                 <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 181 31" width="190px">
                                     <title>specbee-modified-logo</title>
                                     <g id="Layer_2_1_">
@@ -102,8 +109,21 @@
                                         </g>
                                     </g>
                                 </svg>
-                                <ul>
-                                    <li class="service"><a href="#">Drupal Services</a></li>
+                                <ul class="service">
+                                    <li class="nav-accordion"><a href="#">Drupal Services
+                                            <i class="fas fa-plus"></i></a>
+                                    </li>
+                                    <div class="nav-servicee">
+                                        <ul>
+                                            <li>Drupal Development</li>
+                                            <li>Drupal Migration And Upgrade</li>
+                                            <li>Drupal Support And Maintenance</li>
+                                            <li>Drupal Consulting</li>
+                                            <li>Drupal SEO</li>
+                                            <li>Acquia Services</li>
+                                            <li>Hire a Drupal Developer</li>
+                                        </ul>
+                                    </div>
                                     <li><a href="#">UI/UX Design</a></li>
                                     <li><a href="#">Work</a></li>
                                     <li><a href="#">About Us</a></li>
@@ -116,7 +136,17 @@
                 </div>
             </nav>
         </header>
-    <div class="bgd__image"></div>
+    <div class="bgd">
+        <div class="bgd__image">
+            <img src="https://www.specbee.com/sites/default/files/styles/wide/public/2023-05/Group%20168.webp?itok=Jn57WqNm">
+        </div>
+        <div class="bgd__container">
+            <h2 class="bgd__title">ACHIEVE YOUR DIGITAL AMBITIONS</h2>
+            <p class="bgd__des">We craft winning web experiences with Drupal</p>
+            <a class="bgd-btn" href="#">EXPLORE OUR DRUPAL SERVICES</a>
+
+        </div>
+    </div>
         <div class="services">
             <h2 class="services__heading">DRUPAL SERVICES</h2>
                 <div class="services__wrapper">
